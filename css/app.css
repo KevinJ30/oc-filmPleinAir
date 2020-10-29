@@ -1,0 +1,633 @@
+/**
+ * Créer par Joudrier Kevin
+ * Méthode : Mobile First
+ **/
+
+/**
+ * Variables
+ **/
+ :root {
+     --primary-color: #4185A8;
+     --primary-color-hover:#3a7897; 
+     --primary-opacity-color: rgba(65, 133, 168, 0.5);
+     --dark-color: #25383B;
+     --dark-color-hover: #152022;
+     --dark-opacity-color: rgba(37, 56, 59, 0.5);
+     --ligth-color: #BAD2D1;
+     --border-color: #7CAFB1;
+ }
+
+/**
+ * Général
+ **/
+
+html, body {
+    margin: 0; padding: 0;
+    font-family: sans-serif;
+    font-size:16px;
+    line-height: 1.5em;
+}
+
+h1, h2, p {
+    margin: 0;padding: 0;
+}
+
+h1, h2 {
+    margin-bottom:16px;
+}
+
+p {
+    margin-bottom:16px;
+}
+
+img {
+    display:block;
+    width:100%;
+}
+
+img:last-child {
+    margin-bottom:16px;
+}
+
+figure {
+    margin:16px 0;
+}
+
+figure:first-child, figure:last-child {
+    margin: 0;
+}
+
+.nav {
+    margin: 0; padding: 4px 0;
+    list-style: none;
+    height:55px;
+}
+
+.container {
+    width:90%;
+    margin:0 auto;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;}
+    .grid.grid-1 { grid-template-columns: repeat(1, fr);}
+    .grid.grid-2 { grid-template-columns: repeat(2, fr);}
+    .grid.grid-3 { grid-template-columns: repeat(3, fr);}
+    .grid.grid-4 { grid-template-columns: repeat(4, fr);}
+
+/**
+ * Components
+ **/
+
+/** SECTION **/
+
+.section { 
+    margin:16px 0;
+    background-position-x:center!important;
+}
+.section-alternate {
+    padding:16px 0;
+    background-color:#EEEEEE;
+}
+
+.section-title {
+    margin-bottom: 16px;
+    color:var(--dark-color);
+}
+
+/** CARD **/
+.card {
+    margin-bottom:48px;
+    padding:32px;
+    box-shadow:0px 10px 20px rgba(37, 56, 59, 0.25);
+    border:1px solid #dbe0e0;
+    color:#25383B;
+    border-radius: 5px;
+}
+
+.card-title {
+    font-size:1.4em;
+}
+
+/**
+ * Utils
+ **/
+
+.cls {
+    overflow: hidden;
+    clear: both;
+}
+
+/** SIMPLE Grid **/
+.row {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    width:100%;
+}
+
+.col {
+    padding-right:32px;
+    width:100%;
+    flex-basis: 0;
+    flex-grow:1;
+}
+
+.col:last-child {
+    padding:0;
+}
+
+/** BADGES **/
+.badges {
+    margin-right:8px;
+    padding:5px;
+    background:var(--dark-color);
+    color:#fff;
+    border-radius:3px;
+    font-size:0.8em;
+}
+
+/** Forms **/
+label { height:auto; }
+
+.form-group {
+    width:100%;
+    margin-bottom:16px;
+}
+
+.form-control {
+    box-sizing: border-box;
+    margin: 0; padding:8px;
+    width:100%; 
+    min-height:16px;
+    border-radius:5px;
+}
+
+/**
+ * Button
+ **/
+
+.btn {
+    display:block;
+    margin-top: 8px;
+    padding:16px 24px;
+    border:none;
+    border-radius:5px;
+    font-weight:600;
+    transition:background .3s;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+/**
+ * Films
+ **/
+ .btn-inline {
+    margin:0;
+    margin-bottom:16px;
+    padding:11px;
+}
+
+.btn.btn-primary {
+    color:#fff;
+    background-color:var(--dark-color);
+}
+.btn.btn-primary:hover {
+    background-color:var(--dark-color-hover);
+}
+
+/**
+ * Header
+ **/
+
+header {
+    position:relative;
+    min-height:350px;
+    background: url('../img/header.jpg')no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+    background-position-y:-20px;
+}
+
+header .btn {
+    margin:0 auto;
+    width:150px;
+}
+
+header .page-info {
+    padding-top:32px;
+    display:none;
+    color:#fff;
+    text-align:center;
+}
+.page-info p {
+    font-weight:600;
+    font-size:1.3em;
+}
+.page-info h1 {
+    font-size:1em;
+    font-weight:400;
+    
+}
+
+ /* LOGO */
+.logo  {
+    margin: 0 auto;
+    padding-top:40px;
+    max-width:300px;
+    max-height:60px;
+    display:block;
+}
+
+/* MAIN-NAVIGATION */
+.main-nav {
+    width:100%;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    background-color:var(--dark-opacity-color);
+}
+
+.main-nav .nav {
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    height:0;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+
+.main-nav .nav.active { 
+    display:flex;
+    height:124px;
+}
+
+.main-nav .nav-item a {
+    display:block;
+    padding:4px 0;
+    color:var(--ligth-color);
+    font-weight:600;
+    text-decoration: none;
+    transition: color .5s ease-in-out, background .5s;
+}
+
+.main-nav .nav-item a:hover {
+    color:#fff;
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
+/**
+ * Bouton navigation mobile
+ **/
+.btn-nav-mobile {
+    position: relative;
+    margin:8px auto;
+    display:block;
+    width:30px;
+    height:30px;
+    border:1px solid var(--ligth-color);
+    border-radius:3px;
+}
+
+span.icon-hamburger {
+    position: relative;
+    display:block;
+    width:80%; height:2px;
+    margin:0 auto;
+    margin-top:50%;
+    background-color:var(--ligth-color);
+    transform: translateY(-50%);
+}
+
+span.icon-hamburger:before, span.icon-hamburger:after {
+    position: absolute;
+    content: '';
+    display:block;
+    width:100%; height:2px;
+    background-color:var(--ligth-color);
+    top:-7px;
+    transition: top .5s, transform .5s;
+    transform-origin: center;
+}
+
+span.icon-hamburger:after {
+    top:7px;
+}
+
+/** btn active **/
+.btn-nav-mobile.active span.icon-hamburger {
+    background-color:transparent;
+}
+
+.btn-nav-mobile.active span.icon-hamburger:before, .btn-nav-mobile.active span.icon-hamburger:after {
+    top:0;
+}
+
+.btn-nav-mobile.active span.icon-hamburger:before {
+    transform: rotate(45deg);
+}
+
+.btn-nav-mobile.active span.icon-hamburger:after {
+    transform: rotate(-45deg);
+}
+
+/**
+ * SECTIONS
+ **/
+
+ /** SECTION INTRO **/
+.section__intro .section__intro-image {
+     grid-row:2;
+}
+
+/**
+ * Section Movie
+ **/
+
+.section__last-movie .container {
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap:16px;
+    align-items: flex-start;
+}
+
+.movie {
+    position:relative;
+    height:100%;
+}
+
+.movie-thumb, .movie-thumb img { height:100%; }
+
+.movie .movie-title {
+    position:absolute;
+    text-align:center;
+    width:100%;
+    color:#fff;
+    background-color:rgba(0, 0, 0, 0.7);
+}
+
+.movie-title h3 {
+    margin: 0; padding: 8px 0;
+    font-size:1em;
+}
+
+.movie-footer {
+    display:flex;
+    position: absolute;
+    bottom: 0; left: 0;
+    width:calc(100% - 16px);
+    padding:8px;
+    justify-content: space-between;
+    text-align:center;
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+ /** SECTION SERVICE **/
+.section__services .container {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.section__services {
+    position:relative;
+    padding:16px 0;
+    background:url('../img/section.jpg') no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.section__services .section-title {
+    color:#fff;
+}
+
+/**
+ * Overlay section
+ **/
+.section__services:before {
+    content:'';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.service {
+    padding:16px;
+    margin-bottom:16px;
+    width: 100%;
+    text-align:center;
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius:3px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    color:#fff;
+}
+
+.service p {
+    margin: 0; padding: 0;
+}
+
+.service:last-child {
+    margin-bottom:0;
+}
+
+.service-icon {
+    display:block;
+    margin:0 auto; margin-bottom:16px;
+}
+
+.service-icon i {
+    font-size:2.5em;
+}
+
+/**
+ * Section-find
+ **/
+
+.section__find-content {
+    width:100%;
+    box-sizing: border-box;
+}
+
+.section__find p {
+    margin:8px 0;
+}
+
+.section__find-map iframe {
+    width:100%;
+    min-height:400px;
+}
+
+.section__find .section-title { 
+    margin-bottom:8px;
+    text-align:center; 
+}
+.section__find .section-subtitle {
+    margin:0;
+    font-size:0.8em;
+    text-align:center;
+}
+
+footer {
+   padding:16px 0;
+   background-color:var(--dark-color);
+   color:var(--border-color);
+}
+
+footer a {
+    text-decoration:none;
+    color:var(--border-color);
+    transition: color .3s;
+}
+
+footer a:hover {
+    color: #8EC8CA;
+}
+
+footer .footer-title {
+    margin:0;
+    font-size:1em;
+    text-align:center;
+}
+
+.footer-nav .nav {
+    display:flex;
+    justify-content: center;
+}
+
+.footer-nav .nav-item:first-child, .footer-nav .nav-item:last-child {
+    padding:0;
+}
+
+.footer-nav .nav-item {
+    padding:0 8px;
+}
+
+/**
+ * Responsive design
+ **/
+@media (min-width: 950px) {
+
+    header {
+        background-position-y:-150px;
+    }
+
+    header .page-info {
+        display:block;
+    }
+
+    .row {
+        flex-direction: row;
+    }
+
+    .btn-nav-mobile {
+        display: none;
+    }
+
+    .main-nav .nav {
+        height:auto;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+
+    .container {
+        width:80%;
+    }
+
+    .section__last-movie .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section__services .container {
+        flex-direction:row;
+    }
+
+    .section__services .service { margin:0; margin-right:16px; }
+
+    .section__find-content {
+        padding-right:8px;
+    }
+
+    .section__find-content, .section__find-map {
+        float:left;
+        width:50%;
+    }
+
+    .section__movies .card{
+        grid-template-columns: repeat(2, 1fr)!important;
+    }
+}
+
+/**
+ * Pages
+ **/
+
+ /** Réservation **/
+ main.page-reservation {
+    width:100%;
+    background-color:red;
+}
+
+main.page-reservation header {
+    background: none;
+    min-height:auto;
+}
+
+.section__reservation {
+    min-height:500px;
+}
+
+/** Movies **/
+.section__movies .card{
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding:0;
+}
+.section__movies .card-thumb { height: 100%; }
+.section__movies .card-thumb img {
+    margin: 0;
+    height:100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.section__movies .article-right {
+    padding:16px;
+    display:flex;
+    flex-direction:column;
+}
+
+.section__movies .card .card-body {
+    height:100%;
+}
+
+.section__movies .card-title, .section__movies .tags, .section__movies .card-footer {
+    min-height:16px;
+}
+
+.section__movies .article-right .card-body {
+    align-items: stretch;
+}
+
+.section__movies .tags { margin-top:-8px; }
+
+.section__movies .card-footer {
+    padding-bottom:32px;
+    text-align:center;
+}
+
+.section__movies .card-footer .btn {
+    display:inline-block;
+}
+
+
+.section__movies .card-footer span.years {
+    text-align:right;
+}
