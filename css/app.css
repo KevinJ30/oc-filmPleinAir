@@ -269,7 +269,8 @@ header .page-info {
 
 .main-nav .nav.active { 
     display:flex;
-    height:124px;
+    height:172px;
+
 }
 
 .main-nav .nav-item a {
