@@ -16,7 +16,7 @@
         <nav class="main-nav">
             <div class="container">
                 <a href="#" class="btn-nav-mobile"><span class="icon-hamburger"></span></a>
-                <ul id="main-nav" class="nav">
+                <ul id="navigation" class="nav">
                     <li class="nav-item"><a href="../index.html">Accueil</a></li>
                     <li class="nav-item"><a href="films.html">Film</a></li>
                     <li class="nav-item active"><a href="reservation.html">Réservation</a></li>
@@ -37,30 +37,30 @@
                             <div class="row">
                                 <div class="form-group col">
                                     <label for="lastname">Nom</label>
-                                    <input type="text" class="form-control" placeholder="votre nom...">
+                                    <input id="lastname" type="text" name="lastname" class="form-control" placeholder="votre nom...">
                                 </div>
 
                                 <div class="form-group col">
-                                    <label for="name">Prenom</label>
-                                    <input type="text" class="form-control" placeholder="votre prenom...">
+                                    <label for="firstname">Prenom</label>
+                                    <input id="firstname" type="text" name="firstname" class="form-control" placeholder="votre prenom...">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="form-group col">
                                     <label for="phone">Numéro de téléphone</label>
-                                    <input type="text" class="form-control" placeholder="04.00.00.00.00">
+                                    <input id="phone" type="text" name="phone" class="form-control" placeholder="04.00.00.00.00">
                                 </div>
 
                                 <div class="form-group col">
-                                    <label for="lastname">E-mail</label>
-                                    <input type="email" class="form-control" placeholder="e-mail@adress.com">
+                                    <label for="email">E-mail</label>
+                                    <input id="email" type="email" name="email" class="form-control" placeholder="e-mail@adress.com">
                                 </div>
                             </div>
         
                             <div class="form-group">
                                 <label for="reservation">Séléctionner votre séance</label>
-                                <select name="reservation" id="reservation" class="form-control">
+                                <select id="reservation" name="reservation" class="form-control">
                                     <option value="">Choisissez une séance</option>
                                     <option value="">Avatar 5 août - 18h30 à 20h30</option>
                                     <option value="">Harry Potter 5 août - 21h00 à 22h30</option>
@@ -75,7 +75,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <footer>
         <div class="container">
             <h2 class="footer-title">Plans du site</h2>

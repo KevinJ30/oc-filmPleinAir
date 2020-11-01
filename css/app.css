@@ -78,10 +78,10 @@ figure:first-child, figure:last-child {
     display:grid;
     grid-template-columns: auto;
     grid-template-rows: auto;}
-    .grid.grid-1 { grid-template-columns: repeat(1, fr);}
-    .grid.grid-2 { grid-template-columns: repeat(2, fr);}
-    .grid.grid-3 { grid-template-columns: repeat(3, fr);}
-    .grid.grid-4 { grid-template-columns: repeat(4, fr);}
+    .grid.grid-1 { grid-template-columns: repeat(1, 1fr);}
+    .grid.grid-2 { grid-template-columns: repeat(2, 1fr);}
+    .grid.grid-3 { grid-template-columns: repeat(3, 1fr);}
+    .grid.grid-4 { grid-template-columns: repeat(4, 1fr);}
 
 .page img, .section img {
     margin-bottom:16px;

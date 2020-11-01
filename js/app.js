@@ -1,6 +1,6 @@
 (function() {
     let buttonMobile = document.querySelector('.btn-nav-mobile');
-    let mainMenu = document.querySelector('#main-nav');
+    let mainMenu = document.querySelector('#navigation');
 
     buttonMobile.addEventListener('click', function(event) {
         event.preventDefault();
